@@ -31,7 +31,7 @@ int main(void)
     PWM_Green_Start();
     PWM_Red_Start();
     
-    flag=1; 
+    flag=0; 
  
     //initializing pattern index
             
@@ -49,11 +49,56 @@ int main(void)
             
         else if (flag == 2)
            {
-            Compare_Mode(3,3); 
+            Compare_Mode(1,1); 
             Period(255, 255); 
-            Compare(0,127); //first value is for red 
+            Compare(0,127); 
             Reset_Counter(); 
         while(flag == 2);
+            }
+        
+        else if (flag == 3)
+           {
+            Compare_Mode(3,1); 
+            Period(255, 255); 
+            Compare(127,0); 
+            Reset_Counter(); 
+        while(flag == 3);
+            }
+        
+        else if (flag == 4)
+           {
+            Compare_Mode(1,3); 
+            Period(127, 127); 
+            Compare(63,63); 
+            Reset_Counter(); 
+        while(flag == 4);
+            }
+        
+        else if (flag == 5)
+           {
+            Compare_Mode(3,1); 
+            Period(63, 63); 
+            Compare(31,31); 
+            Reset_Counter(); 
+        while(flag == 5);
+            }
+        
+        else if (flag == 6)
+           {
+            Compare_Mode(1,1); 
+            Period(255, 255); 
+            Compare(63,127); 
+            Reset_Counter(); 
+        while(flag == 6);
+            }
+        
+        else if (flag == 7)
+           {
+            Compare_Mode(3,1); 
+            Period(255, 127); 
+            Compare(127,63); 
+            Reset_Counter(); 
+        while(flag == 7);
             }
         
 }
