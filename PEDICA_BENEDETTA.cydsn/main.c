@@ -21,21 +21,24 @@
 */
 #include "project.h"
 #include "Interrupt.h"
+#include "Configuration_settings.h"
 
 int main(void)
 {
     CyGlobalIntEnable; 
     isr_StartEx(Custom_ISR); //setting of interrupt vector adress
+    //initializing clocks
     Clock_PWM_Start();
     Clock_DEB_Start();
+    //initializing PWMs
     PWM_Green_Start();
     PWM_Red_Start();
     
-    flag=0; 
+    flag=0;   //setting initial value 
  
     //initializing pattern index
             
-        for (;;)
+        for (;;) 
         {
         if (flag ==1) //first configuration
         {
@@ -44,7 +47,7 @@ int main(void)
            Compare(0,0); 
            Reset_Counter(); 
         
-        while(flag == 1);
+        while(flag == 1); 
         }
             
         else if (flag == 2)

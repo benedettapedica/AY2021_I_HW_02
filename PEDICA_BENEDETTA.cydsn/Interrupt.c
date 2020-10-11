@@ -16,35 +16,9 @@ CY_ISR(Custom_ISR)
     flag ++;
     if(flag==8)
     {
-       flag=1; 
+       flag=1; //using a cycle to return from state 7 to state 1
     }
 }
 
-//including in this .c file all the settings for the PWMs basing on different configurations
-
-void Period(uint8 value1, uint8 value2) 
-{
-    PWM_Red_WritePeriod(value1);
-    PWM_Green_WritePeriod(value2);     
-}
-
-void Compare(uint8 value1, uint8 value2) 
-{
-    PWM_Red_WriteCompare(value1); 
-    PWM_Green_WriteCompare(value2);
-
-}
-
-void Compare_Mode(uint8 value1, uint8 value2)
-{
-    PWM_Red_SetCompareMode(value1);
-    PWM_Green_SetCompareMode(value2);   
-}
-
-void Reset_Counter(void) //reset of the PWMs counters
-{
-    PWM_Red_WriteCounter(0);
-    PWM_Green_WriteCounter(0);    
-}
 
 /* [] END OF FILE */
