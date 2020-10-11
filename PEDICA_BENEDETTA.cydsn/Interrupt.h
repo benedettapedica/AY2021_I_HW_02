@@ -9,16 +9,27 @@
  *
  * ========================================
 */
-#ifndef __INTERRUPT_ROUTINES_H
-#define __INTERRUPT_ROUTINES_H
+
+#ifndef __INTERRUPT_H
+#define __INTERRUPT_H
 
     #include "project.h"
     
+    uint8 flag;
+ 
     CY_ISR_PROTO(Custom_ISR);
     
 #endif
 
-uint8 state;
-void Start_Blinking(void);
+uint8 flag; 
+
+// including in this header file all the functions needed to program different configuration through PWMs;
+// by definition, the first value regards the Red channel.
+
+void Compare_Mode(uint8 value1, uint8 value2); 
+void Period(uint8 value1, uint8 value2); 
+void Compare(uint8 value1, uint8 value2); 
+void Reset_Counter(void);
+
 
 /* [] END OF FILE */
