@@ -15,9 +15,8 @@
 // including in this header file all the functions needed to program different configuration through PWMs;
 // by definition, the first value regards the Red channel.
 
-void Compare_Mode(uint8 value1, uint8 value2); 
-void Period(uint8 value1, uint8 value2); 
-void Compare(uint8 value1, uint8 value2); 
+void Settings(uint8 value1, uint8 value2,uint8 value3, uint8 value4, uint8 value5, uint8 value6); 
+
 void Reset_Counter(void);
 
 /* [] END OF FILE */

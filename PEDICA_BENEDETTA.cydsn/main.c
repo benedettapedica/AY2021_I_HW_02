@@ -42,64 +42,50 @@ int main(void)
         {
         if (flag ==1) //first configuration
         {
-           Compare_Mode(1,1); 
-           Period(255, 255); 
-           Compare(0,0); 
+           Settings(255,255,0,0,1,1);
            Reset_Counter(); 
-        
+                   
         while(flag == 1); 
         }
             
         else if (flag == 2)
            {
-            Compare_Mode(1,1); 
-            Period(255, 255); 
-            Compare(0,127); 
+            Settings(255,255,0,127,1,1);
             Reset_Counter(); 
         while(flag == 2);
             }
         
         else if (flag == 3)
            {
-            Compare_Mode(3,1); 
-            Period(255, 255); 
-            Compare(127,0); 
+            Settings(255,255,127,0,3,1);
             Reset_Counter(); 
         while(flag == 3);
             }
         
         else if (flag == 4)
            {
-            Compare_Mode(1,3); 
-            Period(127, 127); 
-            Compare(63,63); 
+            Settings(127,127,63,63,1,3);
             Reset_Counter(); 
         while(flag == 4);
             }
         
         else if (flag == 5)
            {
-            Compare_Mode(3,1); 
-            Period(63, 63); 
-            Compare(31,31); 
+            Settings(63,63,31,31,3,1); 
             Reset_Counter(); 
         while(flag == 5);
             }
         
         else if (flag == 6)
            {
-            Compare_Mode(1,1); 
-            Period(255, 255); 
-            Compare(63,127); 
+            Settings(255,255,63,127,1,1);
             Reset_Counter(); 
         while(flag == 6);
             }
         
         else if (flag == 7)
            {
-            Compare_Mode(3,1); 
-            Period(255, 127); 
-            Compare(127,63); 
+            Settings(255,127,127,63,3,1);
             Reset_Counter(); 
         while(flag == 7);
             }

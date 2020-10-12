@@ -16,23 +16,16 @@
 
 //including in this .c file all the settings for the PWMs basing on different configurations
 
-void Period(uint8 value1, uint8 value2) 
+void Settings(uint8 value1, uint8 value2,uint8 value3, uint8 value4, uint8 value5, uint8 value6) 
 {
     PWM_Red_WritePeriod(value1);
     PWM_Green_WritePeriod(value2);     
-}
 
-void Compare(uint8 value1, uint8 value2) 
-{
-    PWM_Red_WriteCompare(value1); 
-    PWM_Green_WriteCompare(value2);
+    PWM_Red_WriteCompare(value3); 
+    PWM_Green_WriteCompare(value4);
 
-}
-
-void Compare_Mode(uint8 value1, uint8 value2)
-{
-    PWM_Red_SetCompareMode(value1);
-    PWM_Green_SetCompareMode(value2);   
+    PWM_Red_SetCompareMode(value5);
+    PWM_Green_SetCompareMode(value6);   
 }
 
 void Reset_Counter(void) 
