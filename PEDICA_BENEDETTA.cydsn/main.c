@@ -11,9 +11,10 @@
 */
 /**
 * \file main.c
+*
 * \brief Main source file for the Assignment 02: driver for RGB LED strips.
 *
-* This source file allows to blink Red and Green channels of a LED with 7 different
+* This source file allows to blink Red and Green channels of a RGB LED with 7 different
 * configurations by using the onboard push button. 
 *
 * \author: Benedetta Pedica
@@ -26,26 +27,31 @@
 int main(void)
 {
     CyGlobalIntEnable; 
+    
     isr_StartEx(Custom_ISR); //setting of interrupt vector adress
+    
     //initializing clocks
     Clock_PWM_Start();
     Clock_DEB_Start();
+    
     //initializing PWMs
     PWM_Green_Start();
     PWM_Red_Start();
     
     flag=0;   //setting initial value 
  
-    //initializing pattern index
-            
+    //using a cycle to switch to sequential configurations
+    //the value of the flag represent the number of the pattern
+    //use of a while at the end to make sure to stay in the pattern until button is pressed again
+       
         for (;;) 
         {
-        if (flag ==1) //first configuration
+        if (flag ==1) 
         {
            Settings(255,255,0,0,1,1);
            Reset_Counter(); 
                    
-        while(flag == 1); 
+        while(flag == 1);  
         }
             
         else if (flag == 2)

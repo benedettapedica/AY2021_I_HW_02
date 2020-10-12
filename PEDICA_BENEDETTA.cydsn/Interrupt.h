@@ -17,7 +17,7 @@
     
     uint8 flag;
  
-    CY_ISR_PROTO(Custom_ISR);
+    CY_ISR_PROTO(Custom_ISR); //implement my custom ISR routine
     
 #endif
 

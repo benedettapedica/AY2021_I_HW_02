@@ -15,6 +15,8 @@
 
 
 //including in this .c file all the settings for the PWMs basing on different configurations
+//the first value is by convention regarding the Red channel.
+//this is done to make code more compact by calling just this function in the scan cycle.
 
 void Settings(uint8 value1, uint8 value2,uint8 value3, uint8 value4, uint8 value5, uint8 value6) 
 {

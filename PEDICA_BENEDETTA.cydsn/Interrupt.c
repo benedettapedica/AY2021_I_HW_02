@@ -13,7 +13,7 @@
 
 CY_ISR(Custom_ISR)
 {
-    flag ++;
+    flag ++; //scanning the flag to get through sequential configurations
     if(flag==8)
     {
        flag=1; //using a cycle to return from state 7 to state 1
