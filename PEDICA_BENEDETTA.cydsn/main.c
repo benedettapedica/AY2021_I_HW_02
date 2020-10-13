@@ -40,7 +40,7 @@ int main(void)
     
     flag=0;   //setting initial value 
  
-    //using a cycle to switch to sequential configurations
+    //using a cycle to switch to sequential configurations with the flag variable declared in the Interrupt
     //the value of the flag represent the number of the pattern
     //use of a while at the end to make sure to stay in the pattern until button is pressed again
        
@@ -98,6 +98,4 @@ int main(void)
         
 }
 }
-
-
 /* [] END OF FILE */

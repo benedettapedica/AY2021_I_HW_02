@@ -13,7 +13,6 @@
 #include "Configuration_settings.h"
 #include "Interrupt.h"
 
-
 //including in this .c file all the settings for the PWMs basing on different configurations
 //the first value is by convention regarding the Red channel.
 //this is done to make code more compact by calling just this function in the scan cycle.
